@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Portafolio</title>
 </head>
 <body>
-    <h1>Mi primer backend :D</h1>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="templates/index.html">Perfil</a></li>
+            <li><a href="templates/habilidades.html">Habilidades</a></li>
+            <li><a href="templates/contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Container for the main content -->
+    <div class="container">
+        <!-- Large Rectangle Box (left side) -->
+        <div class="large-box">
+            <img src="{{ url_for('static', filename='images/kmile.jpg') }}" alt="Profile Picture" class="profile-pic">
+            <h1 class="main text">Camila Rodríguez Rosas</h1>
+            <div class="main-text-ing">
+                <p>Ingeniería en sistemas computacionales</p>
+            </div>
+        </div>
+
+        <!-- Square Boxes (right side) -->
+        <div class="square-box1">
+            <div class="sketchfab-embed-wrapper"> <iframe title="GLB to STL Converter" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/fd206968433b4c0dbde74d8339e7a5f3/embed"> </iframe> <p style="font-size: 20px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/glb-to-stl-converter-fd206968433b4c0dbde74d8339e7a5f3?utm_medium=embed&utm_campaign=share-popup&utm_content=fd206968433b4c0dbde74d8339e7a5f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> GLB to STL Converter </a> by <a href="https://sketchfab.com/camilaaa6?utm_medium=embed&utm_campaign=share-popup&utm_content=fd206968433b4c0dbde74d8339e7a5f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> camilaaa6 </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=fd206968433b4c0dbde74d8339e7a5f3" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+            <p>AR object</p>
+        </div>
+        <div class="square-box2">
+            <a href="{{ url_for('static', filename='documents/stack_overflow_survey') }}" download="Presentación">
+                <img src="{{ url_for('static', filename='images/presentacion.png') }}" alt="Presentación Stack Overflow" class="square-img">
+            </a>
+            <p>Presentación <img src="{{ url_for('static', filename='images/arrow_down.svg') }}" alt="download"></p>
+        </div>
+        <div class="square-box3">
+            <a href="{{ url_for('static', filename='documents/socials inv.pdf') }}" download="Investigación">
+                <img src="{{ url_for('static', filename='images/socials.jpg') }}" alt="Investigación" class="square-img">
+            </a>
+            <p>Investigación <img src="{{ url_for('static', filename='images/arrow_down.svg') }}" alt="download"></p>
+        </div>
+        <div class="square-box4">
+            <a href="{{ url_for('static', filename='documents/ahorcado.py') }}" download="ahorcadoCamila.py">
+                <img src="{{ url_for('static', filename='images/ahorcado.jpg') }}" alt="Ahorcado" class="square-img">
+            </a>
+            <p>Ahorcado <img src="{{ url_for('static', filename='images/ahorcado.svg') }}" alt="download"></p>
+        </div>
+    </div>
 </body>
 </html>
