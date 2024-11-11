@@ -9,9 +9,9 @@
 <body>
 
 <nav>
-    <a href="templates/index.html">Perfil</a>
-    <a href="templates/habilidades.html">Habilidades</a>
-    <a href="templates/contacto.html">Contacto</a>
+    <a href="{{ url_for('home') }}">Perfil</a>
+    <a href="{{ url_for('habilidades') }}">Habilidades</a>
+    <a href="{{ url_for('contacto') }}">Contacto</a>
 </nav>
 
 <main>

@@ -10,9 +10,9 @@
     <!-- Navbar -->
     <nav class="navbar">
         <ul>
-            <li><a href="templates/index.html">Perfil</a></li>
-            <li><a href="templates/habilidades.html">Habilidades</a></li>
-            <li><a href="templates/contacto.html">Contacto</a></li>
+            <li><a href="{{ url_for('home') }}">Perfil</a></li>
+            <li><a href="{{ url_for('habilidades') }}">Habilidades</a></li>
+            <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
         </ul>
     </nav>
 
@@ -24,6 +24,19 @@
             <h1 class="main text">Camila Rodríguez Rosas</h1>
             <div class="main-text-ing">
                 <p>Ingeniería en sistemas computacionales</p>
+            </div>
+            <div class="row">
+                <form action="{{ url_for ('success') }}" method="post">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Ingresa tu correo</label>
+                        <input type="email" name="email" id="email">
+    
+                        <label for="password" class="form-label">Ingresa tu contraseña</label>
+                        <input type="password" name="password" id="password">
+    
+                        <button type="submit" class="btn btn-prymary">Ingresar</button>
+                    </div>
+                </form>
             </div>
         </div>
 
