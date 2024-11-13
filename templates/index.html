@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
 </head>
 <body>
     <!-- Navbar -->
@@ -59,9 +59,9 @@
         </div>
         <div class="square-box4">
             <a href="{{ url_for('static', filename='documents/ahorcado.py') }}" download="ahorcadoCamila.py">
-                <img src="{{ url_for('static', filename='images/ahorcado.jpg') }}" alt="Ahorcado" class="square-img">
+                <img src="{{ url_for('static', filename='images/ahorcado.png') }}" alt="Ahorcado" class="square-img">
             </a>
-            <p>Ahorcado <img src="{{ url_for('static', filename='images/ahorcado.svg') }}" alt="download"></p>
+            <p>Ahorcado <img src="{{ url_for('static', filename='images/arrow_down.svg') }}" alt="download"></p>
         </div>
     </div>
 </body>
