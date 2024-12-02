@@ -20,6 +20,10 @@ def habilidades():
 def contacto():
     return render_template('contacto.html')
 
+@app.route ('/machineLearning')
+def machineLearning():
+    return render_template('machine-learning.html')
+
 @app.route('/success', methods=['post'])
 def success():
     email = request.form['email']
