@@ -19,12 +19,13 @@
         <div id="label-container"></div>
         <div class="output-section">
           <h3>Output</h3>
+          <!-- Labels will dynamically populate here -->
         </div>
     </div>
 
     <!-- TensorFlow and Teachable Machine Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-    <script src="script.js"></script>
+    <script src="{{url_for('static', filename='documents/script.js')}}"></script>
 </body>
 </html>
